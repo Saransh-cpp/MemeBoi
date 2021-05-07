@@ -1,5 +1,7 @@
 const express = require('express');
 const axios = require("axios");
+
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -37,6 +39,10 @@ app.get('/:reddit/:id', async (req, res) => {
     res.json({
         url: memeURL
     })
+})
+
+app.get('/', (req, res) => {
+    res.send("Please have a look at my GitHub's README for instructions, but if you already did then go ahead :D.")
 })
 
 app.listen(PORT, () => {

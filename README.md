@@ -27,3 +27,24 @@ A meme API written with javascript, node.js and express.js that scraps meme link
 - Always use a `try` and `catch` block.
 
 - All contributions are welcome:). 
+
+# Installing locally
+
+1. `Fork` and `clone` the repository.
+
+2. Navigate to the `MemeBoi` repository using -
+```sh
+cd MemeBoi
+```
+3. Run the following command to install dependencies - 
+``` sh
+npm install
+```
+4. To start the server run -
+```sh
+npm start
+```
+5. To run the example located at `./useApi.js` -
+```sh
+node useApi.js
+```

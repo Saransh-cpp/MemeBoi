@@ -45,6 +45,15 @@ app.get('/', (req, res) => {
     res.send("Please have a look at my GitHub's README for instructions, but if you already did then go ahead :D.")
 })
 
+app.get('/:reddit', (req, res) => {
+    let reddit = req.params.reddit;
+    res.send(`Please enter the total number of memes to be scraped from subreddit ${reddit}`)
+})
+
+app.get('*', (req, res) => {
+    res.send("Oops, you're at the wrong page (404!)")
+})
+
 app.listen(PORT, () => {
     console.log('listening on port');
 })

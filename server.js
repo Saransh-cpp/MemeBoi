@@ -4,8 +4,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 let memeURL = '';
-async function getData (id) {
-    const mainUrl = `https://reddit.com/r/memes.json?limit=${id}`;
+async function getData (reddit, id) {
+    const mainUrl = `https://reddit.com/r/${reddit}.json?limit=${id}`;
     await axios
     .get(mainUrl)
     .then((response) => {
@@ -31,8 +31,8 @@ const randNo = (limit) => {
     return thatNo;
 };
 
-app.get('/:id', async (req, res) => {
-    await getData(req.params.id);
+app.get('/:reddit/:id', async (req, res) => {
+    await getData(req.params.reddit, req.params.id);
     console.log("memeURL");
     res.json({
         url: memeURL

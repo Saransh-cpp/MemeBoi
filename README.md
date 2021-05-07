@@ -6,7 +6,7 @@ A meme API written with javascript, node.js and express.js that scraps meme link
 
 1. Open the [deployment](https://meme-boii.herokuapp.com/).
 
-2. Add 'subreddit' you want to search after, for example `https://meme-boii.herokuapp.com/dankmemes` (won't work yet).
+2. Add `subreddit` you want to search after, for example `https://meme-boii.herokuapp.com/dankmemes` (won't work yet).
 
 3. Add the total number of memes out of which 1 random meme will be selected, for example `https://meme-boii.herokuapp.com/dankmemes/10`.
 

@@ -2,6 +2,8 @@
 
 A meme API written with javascript, node.js and express.js that scraps meme links from reddit's API. 
 
+(Though the API was intended to fetch memes, it can be used to fetch images from any subreddit. For example - `http://meme-boii.herokuapp.com/Awww/10` will give you cute images of dogs and cats rather than memes.)
+
 # Usage
 
 1. Open the [deployment](https://meme-boii.herokuapp.com/).

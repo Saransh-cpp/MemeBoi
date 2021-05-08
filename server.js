@@ -11,7 +11,7 @@ async function getData (reddit, id) {
     await axios
     .get(mainUrl)
     .then((response) => {
-        let memeNumber = randNo(id);
+        let memeNumber = randomNumber(id);
         console.log(response.data["data"]["children"][memeNumber]["data"]["url_overridden_by_dest"]);
         let memeFound = false;
         while (!memeFound) {
@@ -19,7 +19,7 @@ async function getData (reddit, id) {
                 memeURL = response.data["data"]["children"][memeNumber]["data"]["url_overridden_by_dest"];
                 memeFound = true;
             } else {
-                memeNumber = randNo(id);
+                memeNumber = randomNumber(id);
             }
         }
     })
@@ -28,9 +28,9 @@ async function getData (reddit, id) {
     });
 }
 
-const randNo = (limit) => {
-    const thatNo = Math.floor(Math.random() * limit);
-    return thatNo;
+const randomNumber = (limit) => {
+    const randNo = Math.floor(Math.random() * limit);
+    return randNo;
 };
 
 app.get('/:reddit/:id', async (req, res) => {
@@ -50,7 +50,7 @@ app.get('/:reddit', (req, res) => {
     res.send(`Please enter the total number of memes to be scraped from subreddit ${reddit}`)
 })
 
-app.get('*', (req, res) => {
+app.use((req, res) => {
     res.send("Oops, you're at the wrong page (404!)")
 })
 

@@ -2,15 +2,24 @@
 
 A meme API written with javascript, node.js and express.js that scraps meme links from reddit's API. 
 
+(Though the API was intended to fetch memes, it can be used to fetch images from any subreddit. For example - `http://meme-boii.herokuapp.com/Awww/10` will give you cute images of dogs and cats rather than memes.)
+
 # Usage
 
 1. Open the [deployment](https://meme-boii.herokuapp.com/).
 
-2. Add `subreddit` you want to search after, for example `https://meme-boii.herokuapp.com/dankmemes` (won't work yet).
+2. Add `subreddit` you want to search after the URL, for example `https://meme-boii.herokuapp.com/dankmemes` (won't work yet) 
+
+(Note: Not all subreddits are supported, if you find an empty json object after making several requests on a subreddit then it most probably is not supported. Some of the supported ones are `memes`, `dankmemes`, `pewdiepie` etc.).
 
 3. Add the total number of memes out of which 1 random meme will be selected, for example `https://meme-boii.herokuapp.com/dankmemes/10`.
 
-4. Boom! Keep refreshing to get a new meme (a URL obviously).
+4. Boom! Keep refreshing to get a new meme (a URL obviously). The object returned will be of the form -
+```JSON
+{
+  "url": "some_image_url_here"
+}
+```
 
 5. Add this API link wherever you want to summon memes (app, website, desktop app etc.).
 
@@ -44,7 +53,7 @@ npm install
 ```sh
 npm start
 ```
-5. To run the example located at `./useApi.js` -
+5. To run the example located at `./useApi.js` execute -
 ```sh
 node useApi.js
 ```

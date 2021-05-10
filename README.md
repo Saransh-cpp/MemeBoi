@@ -57,3 +57,11 @@ npm start
 ```sh
 node useApi.js
 ```
+
+# Projects that use this API
+
+- [MemeShare](https://www.github.com/Saransh-cpp/MemeShare)
+
+An app made with Kotlin that fetches and displays memes filtered by category.
+
+Let me know if any of your projects use this API, I'll be happy to add them here (You can do so much more than just memes using this API! And I'll appreciate if you can provide a link to this repository in the project that uses this API).

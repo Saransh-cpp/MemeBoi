@@ -54,7 +54,7 @@ app.get('/:reddit', (req, res) => {
 
 app.use((req, res) => {
     res.status(404).json({
-        "message":"Oops, you're at the wrong page (404!)"})
+        "message": "Oops, you're at the wrong page (404!)"})
 })
 
 app.listen(PORT, () => {

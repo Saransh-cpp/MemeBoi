@@ -43,7 +43,7 @@ app.get('/:reddit/:id', async (req, res) => {
 
 app.get('/', (req, res) => {
     res.status(200).json({
-        "message":"Please have a look at my GitHub's README for instructions, but if you already did then go ahead :D."})
+        "message": "Please have a look at my GitHub's README for instructions, but if you already did then go ahead :D."})
 })
 
 app.get('/:reddit', (req, res) => {

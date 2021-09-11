@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 app.get('/:reddit', (req, res) => {
     let reddit = req.params.reddit;
     res.status(200).json({
-        "message":`Please enter the total number of memes to be scraped from subreddit ${reddit}`})
+        "message": `Please enter the total number of memes to be scraped from subreddit ${reddit}`})
 })
 
 app.use((req, res) => {
